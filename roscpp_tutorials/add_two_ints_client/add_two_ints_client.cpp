@@ -33,13 +33,14 @@
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "add_two_ints_client");
-  if (argc != 3)
+  if (argc != 4)
   {
     ROS_INFO("usage: add_two_ints_client X Y");
     return 1;
   }
 
   ros::NodeHandle n;
+  ROS_INFO("other changes here");
   ros::ServiceClient client = n.serviceClient<roscpp_tutorials::TwoInts>("add_two_ints");
   roscpp_tutorials::TwoInts srv;
   srv.request.a = atoi(argv[1]);
@@ -47,12 +48,13 @@ int main(int argc, char **argv)
   if (client.call(srv))
   {
     ROS_INFO("Sum: %ld", (long int)srv.response.sum);
-    ROS_INFO("New code here");
+    ROS_INFO("change 3");
   }
   else
   {
     ROS_ERROR("Failed to call service add_two_ints");
     return 1;
+    ROS_INFO("merge change");
   }
 
   return 0;
