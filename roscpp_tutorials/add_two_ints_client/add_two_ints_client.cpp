@@ -48,6 +48,7 @@ int main(int argc, char **argv)
   if (client.call(srv))
   {
     ROS_INFO("Sum: %ld", (long int)srv.response.sum);
+    ROS_INFO("change 3");
   }
   else
   {
