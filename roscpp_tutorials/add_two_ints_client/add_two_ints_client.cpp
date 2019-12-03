@@ -53,6 +53,7 @@ int main(int argc, char **argv)
   {
     ROS_ERROR("Failed to call service add_two_ints");
     return 1;
+    ROS_INFO("merge change");
   }
 
   return 0;
