@@ -33,7 +33,7 @@
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "add_two_ints_client");
-  if (argc != 3)
+  if (argc != 4)
   {
     ROS_INFO("usage: add_two_ints_client X Y");
     return 1;
@@ -54,6 +54,7 @@ int main(int argc, char **argv)
   {
     ROS_ERROR("Failed to call service add_two_ints");
     return 1;
+    ROS_INFO("merge change");
   }
 
   return 0;
