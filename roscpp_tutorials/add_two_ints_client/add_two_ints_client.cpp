@@ -33,7 +33,7 @@
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "add_two_ints_client");
-  if (argc != 4)
+  if (argc != 3)
   {
     ROS_INFO("usage: add_two_ints_client X Y");
     return 1;
