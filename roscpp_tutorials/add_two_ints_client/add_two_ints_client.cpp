@@ -40,6 +40,7 @@ int main(int argc, char **argv)
   }
 
   ros::NodeHandle n;
+  ROS_INFO("other changes here");
   ros::ServiceClient client = n.serviceClient<roscpp_tutorials::TwoInts>("add_two_ints");
   roscpp_tutorials::TwoInts srv;
   srv.request.a = atoi(argv[1]);
