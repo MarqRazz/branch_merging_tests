@@ -47,6 +47,7 @@ int main(int argc, char **argv)
   if (client.call(srv))
   {
     ROS_INFO("Sum: %ld", (long int)srv.response.sum);
+    ROS_INFO("New code here");
   }
   else
   {
